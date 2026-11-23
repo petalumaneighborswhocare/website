@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Petaluma Neighbors Who Care</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#10333a;
+  --ink-soft:#3f5f66;
+  --sky:#eaf3f3;
+  --paper:#ffffff;
+  --gold:#e0a63a;
+  --barn:#b3412c;
+  --line:#cfe0e1;
+  --display:"Bricolage Grotesque","Trebuchet MS",system-ui,sans-serif;
+  --body:"Source Sans 3",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--sky);color:var(--ink);font-family:var(--body);font-size:18px;line-height:1.6}
+h1,h2,h3{font-family:var(--display);line-height:1.08;margin:0;text-wrap:balance}
+p{margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--barn);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+.nav{position:sticky;top:0;z-index:5;background:rgba(234,243,243,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:60px;flex-wrap:wrap;padding-top:6px;padding-bottom:6px}
+.brand{font-family:var(--display);font-weight:800;text-decoration:none;font-size:1.05rem}
+.nav ul{display:flex;gap:6px 20px;list-style:none;margin:0;padding:0;flex-wrap:wrap;align-items:center}
+.nav a.link{text-decoration:none;font-weight:600;font-size:.95rem;padding:6px 0;border-bottom:2px solid transparent}
+.nav a.link:hover{border-color:var(--gold)}
+.btn{display:inline-block;background:var(--gold);color:var(--ink);font-family:var(--display);font-weight:700;text-decoration:none;padding:12px 22px;border-radius:999px;border:2px solid var(--ink);transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.small{padding:7px 16px;font-size:.92rem}
+.btn.ghost{background:transparent}
+.hero{background:linear-gradient(#cfe7ee,#f6efd9 78%);position:relative;overflow:hidden}
+.hero .wrap{padding-top:56px;padding-bottom:0;position:relative;z-index:2}
+.eyebrow{font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-size:.82rem;color:var(--barn)}
+.hero h1{font-size:clamp(2.4rem,7vw,4.6rem);font-weight:800;max-width:14ch;margin-top:12px}
+.hero .lede{font-size:1.25rem;max-width:34em;margin-top:18px;color:var(--ink-soft)}
+.hero .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.scene{display:block;width:100%;height:auto;margin-top:-30px;position:relative;z-index:1}
+.math{background:var(--ink);color:#fff}
+.math .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:0;padding-top:34px;padding-bottom:34px}
+.math .cell{padding:8px 24px;border-left:1px solid rgba(255,255,255,.22)}
+.math .cell:first-child{border-left:0;padding-left:0}
+.math .num{font-family:var(--display);font-weight:800;font-size:clamp(2rem,5vw,3.2rem);color:var(--gold);line-height:1;font-variant-numeric:tabular-nums}
+.math .cap{margin-top:8px;color:#d3e4e6;font-size:1rem}
+section{padding:72px 0}
+section h2{font-size:clamp(1.9rem,4.5vw,2.8rem);font-weight:800}
+.sub{margin-top:12px;color:var(--ink-soft);max-width:36em}
+.steps{list-style:none;margin:36px 0 0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:16px;counter-reset:s}
+.steps li{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:20px 18px 22px;counter-increment:s}
+.steps li::before{content:counter(s);display:grid;place-items:center;width:36px;height:36px;border-radius:50%;background:var(--ink);color:var(--gold);font-family:var(--display);font-weight:800;margin-bottom:12px}
+.steps h3{font-size:1.1rem;margin-bottom:6px}
+.steps p{font-size:.98rem;color:var(--ink-soft);line-height:1.5}
+.split{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.bar{display:flex;height:64px;border-radius:14px;overflow:hidden;border:2px solid var(--ink);margin-top:26px;font-family:var(--display);font-weight:800}
+.bar div{display:grid;place-items:center}
+.bar .a{flex:70;background:var(--gold)}
+.bar .b{flex:15;background:#f1d28d}
+.bar .c{flex:15;background:#f8e8c0}
+.bar-legend{display:flex;justify-content:space-between;font-size:.9rem;color:var(--ink-soft);margin-top:8px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:30px}
+.card h3{font-size:1.5rem;margin-bottom:10px}
+.join{background:var(--gold)}
+.join .wrap{display:flex;justify-content:space-between;align-items:center;gap:28px;flex-wrap:wrap}
+.join h2{max-width:16ch}
+.join p{max-width:30em;margin-top:10px}
+.join .btn{background:var(--ink);color:#fff;border-color:var(--ink)}
+.join .note{font-size:.9rem;margin-top:10px}
+.next{display:inline-flex;gap:10px;align-items:center;background:var(--paper);border:2px dashed var(--ink-soft);border-radius:14px;padding:12px 18px;margin-top:22px;font-weight:600}
+.next b{font-family:var(--display);color:var(--barn)}
+details{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:0;margin-top:10px}
+summary{cursor:pointer;font-family:var(--display);font-weight:700;font-size:1.08rem;padding:16px 20px;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:1.4rem;line-height:1;color:var(--barn)}
+details[open] summary::after{content:"\2212"}
+details p{padding:0 20px 18px;color:var(--ink-soft)}
+footer{background:var(--ink);color:#d3e4e6;padding:44px 0}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer strong{color:#fff;font-family:var(--display);font-size:1.15rem}
+footer a{color:var(--gold)}
+@media (max-width:860px){
+  .steps{grid-template-columns:1fr 1fr}
+  .split{grid-template-columns:1fr}
+}
+@media (max-width:560px){
+  body{font-size:17px}
+  .steps{grid-template-columns:1fr}
+  .math .wrap{grid-template-columns:1fr;gap:18px}
+  .math .cell{border-left:0;padding:0}
+  section{padding:52px 0}
+  .nav ul{gap:4px 14px}
+}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top">Petaluma Neighbors Who Care</a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a class="link" href="#how">How it works</a></li>
+        <li><a class="link" href="#nominate">Nominate</a></li>
+        <li><a class="link" href="#meetings">Meetings</a></li>
+        <li><a class="link" href="#questions">Questions</a></li>
+        <li><a class="link" href="#contact">Contact</a></li>
+        <li><a class="btn small" href="#join">Join</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Petaluma and southern Sonoma County</p>
+      <h1>A grown up way to give back.</h1>
+      <p class="lede">Each quarter, Petaluma neighbors each give $100. We hear from three local nonprofits, vote together, and give the whole pot away. Simple, local, and you can see exactly where it goes.</p>
+      <div class="cta">
+        <a class="btn" href="#join">Join the circle</a>
+        <a class="btn ghost" href="#how">See how it works</a>
+      </div>
+    </div>
+    <svg class="scene" viewBox="0 0 1200 330" role="img" aria-label="Illustration of rolling gold hills, a barn, and the Petaluma River with downtown buildings" preserveAspectRatio="xMidYMax slice">
+      <circle cx="960" cy="90" r="46" fill="#f7c85a" opacity=".9"/>
+      <path d="M0 210 C150 140 300 150 450 190 C600 230 760 120 940 150 C1060 170 1130 190 1200 170 V330 H0Z" fill="#c9b36a"/>
+      <path d="M0 250 C170 190 330 220 520 240 C700 260 880 180 1040 205 C1110 215 1160 230 1200 225 V330 H0Z" fill="#b2993f"/>
+      <g fill="#b3412c"><rect x="860" y="188" width="54" height="34"/><path d="M852 190 L887 164 L922 190Z" fill="#8f2f1e"/></g>
+      <rect x="880" y="202" width="14" height="20" fill="#f6efd9"/>
+      <g fill="#10333a" opacity=".85"><rect x="250" y="206" width="30" height="46"/><rect x="284" y="196" width="36" height="56"/><rect x="324" y="210" width="28" height="42"/><rect x="356" y="200" width="34" height="52"/></g>
+      <g fill="#f6efd9" opacity=".9"><rect x="258" y="214" width="6" height="8"/><rect x="268" y="214" width="6" height="8"/><rect x="292" y="206" width="6" height="8"/><rect x="304" y="206" width="6" height="8"/><rect x="332" y="218" width="6" height="8"/><rect x="364" y="210" width="6" height="8"/><rect x="376" y="210" width="6" height="8"/></g>
+      <path d="M0 280 C200 262 360 300 560 284 C760 268 940 300 1200 276 V330 H0Z" fill="#2c7f8c"/>
+      <path d="M0 300 C220 288 400 316 620 302 C820 290 1000 314 1200 296 V330 H0Z" fill="#10333a"/>
+      <path d="M120 292 q40 -10 80 0" stroke="#d3eef2" stroke-width="3" fill="none" opacity=".7"/>
+      <path d="M700 296 q50 -10 100 0" stroke="#d3eef2" stroke-width="3" fill="none" opacity=".6"/>
+    </svg>
+  </div>
+
+  <div class="math" aria-label="The math">
+    <div class="wrap">
+      <div class="cell"><div class="num">$100</div><p class="cap">from each member, each meeting</p></div>
+      <div class="cell"><div class="num">100</div><p class="cap">neighbors gives $10,000 every quarter</p></div>
+      <div class="cell"><div class="num">4</div><p class="cap">meetings a year, $400 a year per member</p></div>
+    </div>
+  </div>
+
+  <section id="how">
+    <div class="wrap">
+      <h2>How it works</h2>
+      <p class="sub">Five steps, four times a year. No committees, no galas, no overhead.</p>
+      <ol class="steps">
+        <li><h3>Join</h3><p>Pledge $100 each quarter through Grapevine.</p></li>
+        <li><h3>Nominate</h3><p>Members suggest local nonprofits that serve Petaluma and southern Sonoma County.</p></li>
+        <li><h3>Three are chosen</h3><p>About two weeks before each meeting, three nominees are picked to present.</p></li>
+        <li><h3>Hear them</h3><p>At the meeting, each nominee shares how they would use the gift.</p></li>
+        <li><h3>Vote and give</h3><p>Members vote. The whole pot goes out the door.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section style="background:var(--paper);border-block:1px solid var(--line)">
+    <div class="wrap split">
+      <div>
+        <h2>One vote. Three gifts.</h2>
+        <p class="sub">The top vote getter receives most of the pot, and the two runners up each get a meaningful share, so every presenter leaves with something.</p>
+        <div class="bar" role="img" aria-label="Split of the pot: 70 percent, 15 percent, 15 percent">
+          <div class="a">70%</div><div class="b">15%</div><div class="c">15%</div>
+        </div>
+        <div class="bar-legend"><span>Top vote getter</span><span>Runner up</span><span>Runner up</span></div>
+      </div>
+      <div class="card">
+        <h3>With 100 members</h3>
+        <p>Each meeting raises $10,000. The top vote getter receives $7,000, and each runner up receives $1,500. More members means bigger gifts.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="join" class="join">
+    <div class="wrap">
+      <div>
+        <h2>Join your neighbors.</h2>
+        <p>Everyone is welcome: neighbors, parents, dads, moms, grown ups, and anyone who loves this town and wants to do something simple and real for it.</p>
+        <p class="note">Joining and giving happen through Grapevine, a secure giving platform.</p>
+      </div>
+      <a class="btn" href="https://www.grapevine.org/giving-circle/DBGC8px/Petaluma-Neighbors-Who-Care" target="_blank" rel="noopener">Join on Grapevine</a>
+    </div>
+  </section>
+
+  <section id="nominate">
+    <div class="wrap">
+      <h2>Nominate a local nonprofit</h2>
+      <p class="sub">Any member can nominate a group that serves Petaluma or southern Sonoma County. Tell us who they are, what they do, and why they matter to our neighbors.</p>
+      <div class="split" style="margin-top:32px;align-items:start">
+        <div class="card"><h3>A good nominee</h3><p>A registered 501(c)(3), or a group with a fiscal sponsor. Serves Petaluma or southern Sonoma County. Has a clear plan for how a gift of several thousand dollars would help people here.</p></div>
+        <div class="card"><h3>To nominate</h3><p>Email <strong>petalumaneighborswhocare@gmail.com</strong> with the group's name, website, and a sentence or two about why you are nominating them. About two weeks before each meeting, three nominees are chosen from the list to present.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="meetings" style="background:var(--paper);border-block:1px solid var(--line)">
+    <div class="wrap">
+      <h2>Meetings</h2>
+      <p class="sub">We meet four times a year. Each meeting runs about an hour: time to meet your neighbors, three short nonprofit presentations, questions, a vote, and a sendoff. Members and curious neighbors thinking about joining are welcome. Bring a friend.</p>
+      <p class="next"><b>Next meeting</b> Date and location to be announced</p>
+    </div>
+  </section>
+
+  <section id="questions">
+    <div class="wrap">
+      <h2>Questions</h2>
+      <div style="margin-top:20px">
+        <details><summary>Who can join?</summary><p>Anyone who lives or works within about 20 minutes of Petaluma and wants to give back locally. Everyone is welcome.</p></details>
+        <details><summary>How much does it cost?</summary><p>Each member gives $100 per meeting, four meetings a year, which is $400 a year.</p></details>
+        <details><summary>Where does the money go?</summary><p>All of it goes to local nonprofits. The top vote getter receives 70 percent of the pot, and each of the two runners up receives 15 percent.</p></details>
+        <details><summary>How do I pay?</summary><p>Joining and giving happen through Grapevine, a secure giving platform. Use the Join button on this page.</p></details>
+        <details><summary>Is my gift tax deductible?</summary><p>We are working with a fiscal sponsor so gifts can be tax deductible. We will confirm the details here before the first meeting.</p></details>
+        <details><summary>Do I have to go to every meeting?</summary><p>No. Come when you can. Your gift still counts.</p></details>
+        <details><summary>Which nonprofits can be nominated?</summary><p>Groups that serve Petaluma and southern Sonoma County.</p></details>
+        <details><summary>How are the three finalists chosen?</summary><p>About two weeks before each meeting, three nominees are chosen from the submitted nominations.</p></details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="contact">
+  <div class="wrap">
+    <div>
+      <strong>Petaluma Neighbors Who Care</strong>
+      <p>Petaluma and southern Sonoma County, California</p>
+    </div>
+    <div>
+      <p>Questions, nominations, or want to help start the first meeting?</p>
+      <p><a href="mailto:petalumaneighborswhocare@gmail.com">petalumaneighborswhocare@gmail.com</a></p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
