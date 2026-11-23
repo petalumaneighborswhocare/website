@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="Petaluma%20Neighbors%20Who%20Care%20Emblem.png">
 <title>Petaluma Neighbors Who Care</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -45,6 +46,9 @@ a{color:inherit}
 .hero h1{font-size:clamp(2.4rem,7vw,4.6rem);font-weight:800;max-width:14ch;margin-top:12px}
 .hero .lede{font-size:1.25rem;max-width:34em;margin-top:18px;color:var(--ink-soft)}
 .hero .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.heroin{display:flex;align-items:center;justify-content:space-between;gap:32px}
+.emblem{width:min(320px,34vw);height:auto;flex:none;border-radius:50%;background:#fff;filter:drop-shadow(0 6px 18px rgba(16,51,58,.18))}
+@media(max-width:720px){.heroin{flex-direction:column;align-items:flex-start}.emblem{width:220px}}
 .scene{display:block;width:100%;height:auto;margin-top:-30px;position:relative;z-index:1}
 .math{background:var(--ink);color:#fff}
 .math .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:0;padding-top:34px;padding-bottom:34px}
@@ -121,7 +125,8 @@ footer a{color:var(--gold)}
 
 <main id="top">
   <div class="hero">
-    <div class="wrap">
+    <div class="wrap heroin">
+      <div class="herotext">
       <p class="eyebrow">Petaluma and southern Sonoma County</p>
       <h1>A grown up way to give back.</h1>
       <p class="lede">Each quarter, Petaluma neighbors each give $100. We hear from three local nonprofits, vote together, and give the whole pot away. Simple, local, and you can see exactly where it goes.</p>
@@ -129,19 +134,27 @@ footer a{color:var(--gold)}
         <a class="btn" href="#join">Join the circle</a>
         <a class="btn ghost" href="#how">See how it works</a>
       </div>
+      </div>
+      <img class="emblem" src="Petaluma%20Neighbors%20Who%20Care%20Emblem.png" alt="Petaluma Neighbors Who Care emblem" width="320" height="320">
     </div>
-    <svg class="scene" viewBox="0 0 1200 330" role="img" aria-label="Illustration of rolling gold hills, a barn, and the Petaluma River with downtown buildings" preserveAspectRatio="xMidYMax slice">
-      <circle cx="960" cy="90" r="46" fill="#f7c85a" opacity=".9"/>
-      <path d="M0 210 C150 140 300 150 450 190 C600 230 760 120 940 150 C1060 170 1130 190 1200 170 V330 H0Z" fill="#c9b36a"/>
-      <path d="M0 250 C170 190 330 220 520 240 C700 260 880 180 1040 205 C1110 215 1160 230 1200 225 V330 H0Z" fill="#b2993f"/>
-      <g fill="#b3412c"><rect x="860" y="188" width="54" height="34"/><path d="M852 190 L887 164 L922 190Z" fill="#8f2f1e"/></g>
-      <rect x="880" y="202" width="14" height="20" fill="#f6efd9"/>
-      <g fill="#10333a" opacity=".85"><rect x="250" y="206" width="30" height="46"/><rect x="284" y="196" width="36" height="56"/><rect x="324" y="210" width="28" height="42"/><rect x="356" y="200" width="34" height="52"/></g>
-      <g fill="#f6efd9" opacity=".9"><rect x="258" y="214" width="6" height="8"/><rect x="268" y="214" width="6" height="8"/><rect x="292" y="206" width="6" height="8"/><rect x="304" y="206" width="6" height="8"/><rect x="332" y="218" width="6" height="8"/><rect x="364" y="210" width="6" height="8"/><rect x="376" y="210" width="6" height="8"/></g>
-      <path d="M0 280 C200 262 360 300 560 284 C760 268 940 300 1200 276 V330 H0Z" fill="#2c7f8c"/>
-      <path d="M0 300 C220 288 400 316 620 302 C820 290 1000 314 1200 296 V330 H0Z" fill="#10333a"/>
-      <path d="M120 292 q40 -10 80 0" stroke="#d3eef2" stroke-width="3" fill="none" opacity=".7"/>
-      <path d="M700 296 q50 -10 100 0" stroke="#d3eef2" stroke-width="3" fill="none" opacity=".6"/>
+    <svg class="scene" viewBox="0 0 1200 330" role="img" aria-label="Illustration of the Petaluma River, the downtown bridge, the water tower, historic downtown buildings and rolling hills" preserveAspectRatio="xMidYMax slice">
+      <line x1="366" y1="146" x2="392" y2="136" stroke="#f2b53d" stroke-width="5" stroke-linecap="round" opacity=".85"/><line x1="355" y1="127" x2="377" y2="110" stroke="#f2b53d" stroke-width="5" stroke-linecap="round" opacity=".85"/><line x1="339" y1="112" x2="355" y2="89" stroke="#f2b53d" stroke-width="5" stroke-linecap="round" opacity=".85"/><line x1="319" y1="103" x2="327" y2="76" stroke="#f2b53d" stroke-width="5" stroke-linecap="round" opacity=".85"/><line x1="298" y1="100" x2="297" y2="72" stroke="#f2b53d" stroke-width="5" stroke-linecap="round" opacity=".85"/><line x1="276" y1="104" x2="266" y2="78" stroke="#f2b53d" stroke-width="5" stroke-linecap="round" opacity=".85"/><line x1="257" y1="115" x2="240" y2="93" stroke="#f2b53d" stroke-width="5" stroke-linecap="round" opacity=".85"/><line x1="242" y1="131" x2="219" y2="115" stroke="#f2b53d" stroke-width="5" stroke-linecap="round" opacity=".85"/><line x1="233" y1="151" x2="206" y2="143" stroke="#f2b53d" stroke-width="5" stroke-linecap="round" opacity=".85"/>
+      <circle cx="300" cy="182" r="46" fill="#f2b53d"/>
+      <path d="M0 196 C120 146 260 156 400 180 C520 200 640 156 780 166 C920 176 1040 152 1200 188 V300 H0Z" fill="#9db8a4"/>
+      <path d="M0 226 C150 176 300 190 440 210 C560 226 700 190 860 205 C1000 218 1100 200 1200 214 V300 H0Z" fill="#a9bf6a"/>
+      <path d="M0 248 C180 218 340 238 520 240 C720 244 900 218 1200 238 V300 H0Z" fill="#7f9f4c"/>
+      <rect x="360" y="214" width="46" height="36" fill="#e8c46c"/><rect x="408" y="222" width="34" height="28" fill="#efd283"/><rect x="366" y="220" width="6" height="8" fill="#2f4a22" opacity=".55"/><rect x="366" y="234" width="6" height="8" fill="#2f4a22" opacity=".55"/><rect x="378" y="220" width="6" height="8" fill="#2f4a22" opacity=".55"/><rect x="378" y="234" width="6" height="8" fill="#2f4a22" opacity=".55"/><rect x="390" y="220" width="6" height="8" fill="#2f4a22" opacity=".55"/><rect x="390" y="234" width="6" height="8" fill="#2f4a22" opacity=".55"/><rect x="414" y="228" width="6" height="8" fill="#2f4a22" opacity=".55"/><rect x="426" y="228" width="6" height="8" fill="#2f4a22" opacity=".55"/>
+      <rect x="770" y="206" width="42" height="44" fill="#e8c46c"/><rect x="814" y="194" width="46" height="56" fill="#efd283"/><rect x="862" y="212" width="40" height="38" fill="#e2b95a"/>
+      <path d="M770 206 h42 M814 194 h46 M862 212 h40" stroke="#6b4e1e" stroke-width="3"/><rect x="777" y="214" width="6" height="8" fill="#2f4a22" opacity=".55"/><rect x="777" y="228" width="6" height="8" fill="#2f4a22" opacity=".55"/><rect x="789" y="214" width="6" height="8" fill="#2f4a22" opacity=".55"/><rect x="789" y="228" width="6" height="8" fill="#2f4a22" opacity=".55"/><rect x="801" y="214" width="6" height="8" fill="#2f4a22" opacity=".55"/><rect x="801" y="228" width="6" height="8" fill="#2f4a22" opacity=".55"/><rect x="821" y="203" width="6" height="8" fill="#2f4a22" opacity=".55"/><rect x="821" y="217" width="6" height="8" fill="#2f4a22" opacity=".55"/><rect x="821" y="231" width="6" height="8" fill="#2f4a22" opacity=".55"/><rect x="833" y="203" width="6" height="8" fill="#2f4a22" opacity=".55"/><rect x="833" y="217" width="6" height="8" fill="#2f4a22" opacity=".55"/><rect x="833" y="231" width="6" height="8" fill="#2f4a22" opacity=".55"/><rect x="845" y="203" width="6" height="8" fill="#2f4a22" opacity=".55"/><rect x="845" y="217" width="6" height="8" fill="#2f4a22" opacity=".55"/><rect x="845" y="231" width="6" height="8" fill="#2f4a22" opacity=".55"/><rect x="869" y="220" width="6" height="8" fill="#2f4a22" opacity=".55"/><rect x="869" y="234" width="6" height="8" fill="#2f4a22" opacity=".55"/><rect x="881" y="220" width="6" height="8" fill="#2f4a22" opacity=".55"/><rect x="881" y="234" width="6" height="8" fill="#2f4a22" opacity=".55"/><rect x="893" y="220" width="6" height="8" fill="#2f4a22" opacity=".55"/><rect x="893" y="234" width="6" height="8" fill="#2f4a22" opacity=".55"/>
+      <g stroke="#2f4a22" stroke-width="4" fill="none"><path d="M922 168 L910 250 M968 168 L980 250 M926 200 L976 200 M920 228 L972 228 M922 168 L976 228 M968 168 L914 228"/></g>
+      <rect x="914" y="140" width="56" height="30" rx="3" fill="#2f4a22"/><path d="M909 141 L942 114 L975 141Z" fill="#2f4a22"/><rect x="940" y="104" width="4" height="12" fill="#2f4a22"/>
+      <rect x="1004" y="218" width="38" height="32" fill="#e8c46c"/><rect x="1044" y="226" width="30" height="24" fill="#efd283"/><rect x="1010" y="224" width="6" height="8" fill="#2f4a22" opacity=".55"/><rect x="1010" y="238" width="6" height="8" fill="#2f4a22" opacity=".55"/><rect x="1022" y="224" width="6" height="8" fill="#2f4a22" opacity=".55"/><rect x="1022" y="238" width="6" height="8" fill="#2f4a22" opacity=".55"/><rect x="1034" y="224" width="6" height="8" fill="#2f4a22" opacity=".55"/><rect x="1034" y="238" width="6" height="8" fill="#2f4a22" opacity=".55"/><rect x="1050" y="231" width="6" height="8" fill="#2f4a22" opacity=".55"/><rect x="1062" y="231" width="6" height="8" fill="#2f4a22" opacity=".55"/>
+      <g fill="#2f4a22"><rect x="68" y="246" width="4" height="8" fill="#3b2a1a"/><path d="M31 246 L70 211 L109 246Z"/><path d="M40 220 L70 183 L100 220Z"/><path d="M49 195 L70 160 L91 195Z"/></g><g fill="#2f4a22"><rect x="116" y="248" width="4" height="8" fill="#3b2a1a"/><path d="M89 248 L118 223 L147 248Z"/><path d="M95 230 L118 202 L141 230Z"/><path d="M102 211 L118 184 L134 211Z"/></g><g fill="#2f4a22"><rect x="210" y="244" width="4" height="8" fill="#3b2a1a"/><path d="M187 244 L212 223 L237 244Z"/><path d="M192 229 L212 205 L232 229Z"/><path d="M198 213 L212 190 L226 213Z"/></g><g fill="#2f4a22"><rect x="1104" y="246" width="4" height="8" fill="#3b2a1a"/><path d="M1067 246 L1106 211 L1145 246Z"/><path d="M1076 220 L1106 183 L1136 220Z"/><path d="M1085 195 L1106 160 L1127 195Z"/></g><g fill="#2f4a22"><rect x="1156" y="248" width="4" height="8" fill="#3b2a1a"/><path d="M1130 248 L1158 224 L1186 248Z"/><path d="M1136 231 L1158 205 L1180 231Z"/><path d="M1143 213 L1158 188 L1173 213Z"/></g><g fill="#2f4a22"><rect x="1078" y="246" width="4" height="8" fill="#3b2a1a"/><path d="M1056 246 L1080 227 L1104 246Z"/><path d="M1062 232 L1080 210 L1098 232Z"/><path d="M1067 217 L1080 196 L1093 217Z"/></g>
+      <circle cx="160" cy="246" r="22" fill="#5f8236"/><circle cx="260" cy="248" r="26" fill="#6f9040"/><circle cx="320" cy="250" r="20" fill="#5f8236"/><circle cx="700" cy="246" r="20" fill="#5f8236"/><circle cx="1010" cy="248" r="16" fill="#6f9040"/><circle cx="1186" cy="244" r="24" fill="#5f8236"/>
+      <path d="M0 262 C200 252 400 270 620 260 C840 250 1000 268 1200 258 V330 H0Z" fill="#86b6c9"/>
+      <path d="M60 282 q50 -8 100 0 M420 296 q60 -9 120 0 M860 286 q60 -8 120 0" stroke="#e6f3f6" stroke-width="3" fill="none" opacity=".8"/>
+      <g stroke="#2f4a22" fill="none" stroke-linecap="round"><path d="M470 262 Q620 196 770 262" stroke-width="7"/><path d="M470 262 H770" stroke-width="6"/><path d="M510 262 V235 M550 262 V222 M590 262 V212 M630 262 V210 M670 262 V218 M710 262 V232 M740 262 V246" stroke-width="3"/><path d="M486 262 V292 M754 262 V292" stroke-width="8"/></g>
+      <path d="M0 304 C250 292 450 314 700 302 C900 294 1050 312 1200 300 V330 H0Z" fill="#3d5a2a"/>
     </svg>
   </div>
 
